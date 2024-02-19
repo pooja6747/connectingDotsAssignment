@@ -5,7 +5,26 @@
 }
 
 body {
- overflow-x: hidden;
+  overflow-x: hidden;
+  background: linear-gradient(to left, #D6CCE7, #D6CCE7, #AAE5F5, #FAFAFA);
+}
+
+.frame{
+  width: Hug (152px);
+height: Hug (33px);
+/* background: rgba(255, 255, 255, 1); */
+
+
+}
+
+.nav-link{
+  font-family: Montserrat;
+font-size: 18px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: center;
+
 }
 
 /* css */
@@ -14,9 +33,9 @@ body {
 }
 
 /* header css start*/
-header {
-  background-image: linear-gradient(to left top, #D6CCE7, #D6CCE7, #AAE5F5, #FAFAFA);
-}
+/* header {
+  background: linear-gradient(to left, #D6CCE7, #D6CCE7, #AAE5F5, #FAFAFA);
+} */
 
 .home {
   /* background-image: linear-gradient(to bottom right,#D6CCE7,#D6CCE7, #AAE5F5, #FAFAFA); */
@@ -42,6 +61,7 @@ header {
 
 /* industry css start*/
 .vertical-text {
+  line-height: 1;
   display: inline-block;
   transform: rotate(270deg);
 }
@@ -53,32 +73,38 @@ header {
   border-radius: 50px;
   position: relative;
   overflow: hidden;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, black 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+  
 }
 
-.img-div:hover{
+.img-div:hover {
+  /* background-position: left bottom; */
   animation: mymove 2s linear infinite alternate;
 }
 
 @keyframes mymove {
-0% {
-  /* -webkit-transform: translateX(0px); */
-  transform: translateX(0px);
-  background-color: black;
-  
-}
+  0% {
+    /* -webkit-transform: translateX(0px); */
+    transform: translateX(0px);
+    background-color: black;
 
-50% {
-  /* -webkit-transform: translateX(0px); */
-  transform: translateX(100px);
-  background-color: black;
-}
+  }
 
-100% {
-  /* -webkit-transform: translateX(0px); */
-  transform: translateX(0px);
-  background-color: black;
-}
+  50% {
+    /* -webkit-transform: translateX(0px); */
+    transform: translateX(100px);
+    background-color: black;
+  }
+
+  100% {
+    /* -webkit-transform: translateX(0px); */
+    transform: translateX(0px);
+    background-color: black;
+  }
 }
 
 .rounded-rectangle img {
@@ -95,26 +121,70 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
+  color: black;
   font-family: Arial, sans-serif;
   text-align: center;
 
 }
 
-.industry {
-  background-image: linear-gradient(to right, #FAFAFA, #E1D0E8, #BCA5DF);
+/* .industry {
+  background: linear-gradient(to right, #FAFAFA, #FAFAFA, #BCA5DF);
 }
 
-/* industry solution css start */
+/* industry solution css start 
 .industry-solution {
-  background-image: linear-gradient(to right, #FAFAFA, #E1D0E8, #BCA5DF);
-}
+  background: linear-gradient(to right, #FAFAFA, #E1D0E8, #BCA5DF);
+} */
 
 .box {
-  background-color: gray;
-  border: 1px solid black;
-  height: 9rem;
-  width: 10rem;
+  background-color: rgba(217, 217, 217, 1);
+  height: 201px;
+  width: 180px;
+}
+
+.industry-title {
+  font-size: 100px;
+}
+
+.services {
+  font-weight: 700;
+}
+
+/* Breakpoint Setting	For Device
+max-width 320px	Smartwatches
+max-width 420px	Smaller devices
+max-width 600px	Phones
+min-width 600px	Tablets and Large Phones
+min-width 768px	Tablets
+min-width 992px	Laptops and Desktops
+min-width 1200px	Monitors, Desktops */
+
+@media screen and (min-width:320px) and (max-width:431px) {
+  .industry-title {
+    font-size: 70px;
+  }
+
+  .holder {
+    font-size: 70px;
+  }
+
+  .vertical-text {
+    transform: rotate(0deg);
+  }
+
+  .title {
+    font-size: 70px;
+  }
 }
 
 
+@media screen and (min-width:540px) and (max-width: 768px) {
+  .col-md-6 {
+
+    width: 100% !important;
+  }
+
+  .vertical-text {
+    transform: rotate(0deg) !important;
+  }
+}
