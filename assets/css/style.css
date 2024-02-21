@@ -66,75 +66,14 @@ text-align: center;
   transform: rotate(270deg);
 }
 
-.rounded-rectangle {
-  width: 300px;
-  height: 100px;
-  background-color: #3498db;
-  border-radius: 50px;
-  position: relative;
-  overflow: hidden;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(to right, black 50%, white 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-out;
-  
-}
-
-.img-div:hover {
-  /* background-position: left bottom; */
-  animation: mymove 2s linear infinite alternate;
-}
-
-@keyframes mymove {
-  0% {
-    /* -webkit-transform: translateX(0px); */
-    transform: translateX(0px);
-    background-color: black;
-
-  }
-
-  50% {
-    /* -webkit-transform: translateX(0px); */
-    transform: translateX(100px);
-    background-color: black;
-  }
-
-  100% {
-    /* -webkit-transform: translateX(0px); */
-    transform: translateX(0px);
-    background-color: black;
-  }
-}
-
-.rounded-rectangle img {
-  height: 6.1rem;
-  width: 6.1rem;
-  object-fit: cover;
-  border-radius: 50px;
-}
-
-
-
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
-  font-family: Arial, sans-serif;
-  text-align: center;
-
-}
-
-/* .industry {
+.industry {
   background: linear-gradient(to right, #FAFAFA, #FAFAFA, #BCA5DF);
 }
 
-/* industry solution css start 
+/* industry solution css start  */
 .industry-solution {
   background: linear-gradient(to right, #FAFAFA, #E1D0E8, #BCA5DF);
-} */
+}
 
 .box {
   background-color: rgba(217, 217, 217, 1);
@@ -148,6 +87,64 @@ text-align: center;
 
 .services {
   font-weight: 700;
+}
+
+/* my class */
+.rounded-rectangle {
+  width: 350px;
+  height: 110px;
+  background-color: #3498db;
+  font-weight: 16px;
+  position: relative;
+  border-radius: 50px !important;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.rounded-rectangle::before {
+  content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    transform: translateX(-100%);
+    transition:  all 0.8s ;
+}
+
+.rounded-rectangle:hover::before{
+  transform: translateX(0);
+  transition:  all 0.8s ;
+  
+}
+
+.text-head{
+  transition: all 0.5s;
+}
+
+.rounded-rectangle:hover .text-head{
+  color: #ffffff !important;
+  transition: all 0.5s;
+}
+
+.imgFit{
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin-left:0px ;
+}
+.blue{
+  background-color: #3498db !important;
+}
+
+
+.text-head{
+  position: absolute;
+  left: 35%;
+  top: 30%;
 }
 
 /* Breakpoint Setting	For Device
@@ -165,7 +162,7 @@ min-width 1200px	Monitors, Desktops */
   }
 
   .holder {
-    font-size: 70px;
+    display: none;
   }
 
   .vertical-text {
@@ -188,3 +185,8 @@ min-width 1200px	Monitors, Desktops */
     transform: rotate(0deg) !important;
   }
 }
+
+
+
+
+
